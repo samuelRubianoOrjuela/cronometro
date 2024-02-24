@@ -1,0 +1,31 @@
+input {
+    display: none;
+}
+body {
+    height: 100vh;
+    background: url(https://i.pinimg.com/originals/31/4c/57/314c57a9a28104b35a5abcd04b6f6b38.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reloj {
+    background-color: white;
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#botones{
+    background-color: blue;
+    display: flex;
+}
+.bx{
+    font-size: 80px;
+    color: white;
+}
+.bx-pause {
+    display: none;
+}
