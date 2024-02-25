@@ -1,31 +1,73 @@
-input {
-    display: none;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,300;1,100&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+:root {
+    --fondoBody: #B5C0D0;
+    --fondoSection: #363062;
+    --fontColor: #F5E8DD;
+    --botones : #818FB4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
 }
 body {
     height: 100vh;
-    background: url(https://i.pinimg.com/originals/31/4c/57/314c57a9a28104b35a5abcd04b6f6b38.jpg);
-    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--fondoBody);
 }
-#reloj {
-    background-color: white;
-    width: 35%;
-    height: 40%;
+input{
+    display: none;
+}
+section{
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: var(--fondoSection);
+    color: var(--fontColor);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#botones{
-    background-color: blue;
+.numeros {
+    margin: 12px 0;
+    font-size: 70px;
+}
+span {
+    margin: 0;
+}
+.botones {
     display: flex;
 }
-.bx{
-    font-size: 80px;
+.bx {
+    margin: 12px 30px;
+    font-size: 60px;
+    background-color: var(--botones);
+    border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
-.bx-pause {
+#stop {
     display: none;
+}
+#check:checked ~ label #stop{
+    display: block;
+}
+#check:checked ~ label #start{
+    display: none;
+}
+@media screen and (max-width: 550px) {
+    section {
+        height: 45.6vw;
+        width: 73vw;
+    }
+    .numeros {
+        font-size: 12.8vw;
+    }
+    .bx{
+        font-size: 11vw;
+    }
 }

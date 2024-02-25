@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/styles.css">
+    <title>Cronometro</title>
 </head>
 <body>
-    <section id="reloj">
-        <div id="numeros">0:00</div>
-        <div id="botones">
-            <div id="boton1">
-                <input type="checkbox" id="check1">
-                <label for=""></label>
-                <label for=""></label>
-                <i class='bx bx-play'></i>
-                <i class='bx bx-pause'></i>
-            </div>
-            <div id="boton2">
-                <i class='bx bx-undo'></i>
-            </div>
+    <section>
+        <div class="numeros">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div class="botones">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="bx bx-play" id="start"></i>
+                <i class='bx bx-pause' id="stop"></i>
+            </label>
+            <i class="bx bx-undo" id="reset"></i>
         </div>
     </section>
+    <script src="./js/app.js" defer></script>
 </body>
-<script src="./js/app.js" defer></script>
 </html>
